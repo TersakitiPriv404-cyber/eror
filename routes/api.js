@@ -207,21 +207,6 @@ router.get('/resep', async (req, res, next) => {
 })
 
 
-router.get('/cekapikey', async (req, res, next) => {
-    var apikeyInput = req.query.apikey;
-
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput !== 'freeapi') return res.sendFile(invalidKey)
-	var limit = 'undefined'
-        if (apikeyInput == 'freeapi') { limit = 'Unlimited!' }
-
-try {
-	res.json({
-               status : `active`,
-                apikey : apikeyInput,
-                limit : limit
-            })
-
 router.get('/addapikey', (req, res, next) => {
     var apikey = req.query.apikey,
         status = req.query.status,
