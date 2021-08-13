@@ -318,7 +318,7 @@ router.get('/remove', (req, res, next) => {
 
 const listkey = ["sayahafiz", "danugans"];
 
-router.get('/tiktod', async (req, res, next) => {
+rout, async (req, res, next) => {
     var apikeyInput = req.query.apikey,
         url = req.query.url
 
@@ -1562,7 +1562,7 @@ router.get('/muslim/tahlil', async (req, res, next) => {
 })
 
 
-router.get('/muslim/wirid', async (req, res, next) => {
+  router.get('/muslim/wirid', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
