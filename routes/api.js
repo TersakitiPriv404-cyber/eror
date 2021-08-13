@@ -11,7 +11,6 @@ var zahirr = db.get("zahirr");
 var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
-
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
