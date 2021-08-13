@@ -11,6 +11,24 @@ var zahirr = db.get("zahirr");
 var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
+const listkey = ["freeapi", "danugans"];
+
+router.get('/cekapikey', async(req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)) {
+    res.json({
+      status: 'active',
+      creator: `${creator}`,
+      apikey: `${apikey}`,
+      message: 'APIKEY ACTIVE'
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
 
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
