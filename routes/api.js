@@ -246,7 +246,7 @@ router.get('/cekapikey', async(req, res, next) => {
       message: 'APIKEY ACTIVE'
     })
   } else {
-    res.json(loghandler.invalidKey)
+    res.json(loghandler.sendFile(invalidKey))
   }
 })
 
