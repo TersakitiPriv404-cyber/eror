@@ -11,7 +11,7 @@ var kuhong = db.get('ojan'); // jan diubah
 
 var creatorList = ['Eka Gans']; // Nama Lu Ngab
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)]; // Ini jan diubah
-var key = 'EkakeY' // Apikey Lu Ngab
+var key = 'sayahafiz' // Apikey Lu Ngab
 
 // Required Modules :
 var ffmpeg = require('fluent-ffmpeg');
