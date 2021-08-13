@@ -159,10 +159,6 @@ var len = 15
         var randomTextNumber = random+randomlagi+'---------Hafidzz'+'HafidzAbdillah';
         
  
- async function cekApiKey(api) {
- 	ap = await zahirr.findOne({apikey:api})
- return ap;
- }
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
