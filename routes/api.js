@@ -233,6 +233,8 @@ router.get('/cekapikey', async (req, res, next) => {
 res.send(JSON.parse(json))
 })
 
+const listkey = ["freeapi", "sayahafiz"];
+
 router.get('/cekapikey', async(req, res, next) => {
 
   const apikey = req.query.apikey;
