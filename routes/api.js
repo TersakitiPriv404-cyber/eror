@@ -233,6 +233,23 @@ router.get('/cekapikey', async (req, res, next) => {
 res.send(JSON.parse(json))
 })
 
+router.get('/cekapikey', async(req, res, next) => {
+
+  const apikey = req.query.apikey;
+
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)) {
+    res.json({
+      status: 'active',
+      creator: `${creator}`,
+      apikey: `${apikey}`,
+      message: 'APIKEY ACTIVE'
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
+
 router.get('/addapikey', (req, res, next) => {
     var apikey = req.query.apikey,
         status = req.query.status,
