@@ -2659,7 +2659,7 @@ router.get('/asah', async (req, res, next) => {
 })
 })
 
-router.get('/ig', async (req, res, next) => {
+router.get('/tebakangka', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             nomor = req.query.nomor
             
