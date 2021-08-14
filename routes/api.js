@@ -334,7 +334,7 @@ router.get('/store', async (req, res, next) => {
 	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
     if (!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
 
-       fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/search/playstore?query=${nama}&apikey=tvT241pY5rPDYQW`))
+       fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/search/playstore?query=${search}&apikey=tvT241pY5rPDYQW`))
         .then(response => response.json())
         .then(data => {
         var result = data;
