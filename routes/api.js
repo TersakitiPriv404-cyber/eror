@@ -2672,8 +2672,8 @@ router.get('/tebakangka', async (req, res, next) => {
         .then(data => {
         var result = data;
              res.json({
-             	author: 'Hafidz Abdillah',
-                 result
+              author: 'Hafidz Abdillah', 
+              message : `Semoga Kalian Senang:)`
              })
          })
          .catch(e => {
