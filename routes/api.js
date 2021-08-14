@@ -2659,6 +2659,28 @@ router.get('/asah', async (req, res, next) => {
 })
 })
 
+router.get('/ig', async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            nomor = req.query.nomor
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
+    if (!nomor) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nomor"})
+
+       fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/angka?nomor=${nomor}&apikey=alpin1`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Hafidz Abdillah',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
+
 router.get('/nebak', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
