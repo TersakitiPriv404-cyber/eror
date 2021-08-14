@@ -599,6 +599,27 @@ router.get('/ytmp4', async (req, res, next) => {
 })
 })
 
+router.get('/sekolah', async (req, res, next) => {
+        var apikeyInput = req.query.apikey
+            
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
+  
+       fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/sekolah?apikey=alpin1`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Hafidz Abdillah',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+
+})
 
 router.get('/stalkgh', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
