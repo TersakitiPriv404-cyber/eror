@@ -599,6 +599,30 @@ router.get('/ytmp4', async (req, res, next) => {
 })
 })
 
+
+router.get('/stalkgh' async (req, res, next) => {
+        var apikeyInput = req.query.apikey,
+            username = req.query.username
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
+    if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
+
+       fetch(encodeURI(`https://alpin-api-2021.herokuapp.com/api/stalk/github?username=${username}&apikey=alpin1`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'Hafidz Abdillah',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+
+})
+
 router.get('/ig', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
             username = req.query.username
@@ -963,20 +987,20 @@ router.get('/base', async (req, res, next) => {
 			}
 })
 
-router.get('/nulis', async(req, res, next) => {
+router.get('/maker/attp', async(req, res, next) => {
 
   const text = req.query.text;
   const apikey = req.query.apikey;
   if(!text) return res.json(loghandler.nottext)
-  if(!apikey) return res.json(loghandler.notparam)
-  
-  if(listkey.includes(apikey)) {
-  let hasil = 'https://dapuhy-api.herokuapp.com/api/maker/nulis?text='+ text +'&apikey=tvT241pY5rPDYQW'
+  if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
+	{
+  let hasil = 'https://alpin-api-2021.herokuapp.com/api/attp?text='+ text +'&apikey=alpin1'
   data = await fetch(hasil).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/nulis.jpg', data)
-  res.sendFile(__path +'/tmp/nulis.jpg')
+  await fs.writeFileSync(__path +'/tmp/attp.gif', data)
+  res.sendFile(__path +'/tmp/attp.gif')
   } else {
-    res.sendFile(invalidKey)
+    res.json(loghandler.invalidKey)
   }
 })
 
