@@ -202,34 +202,23 @@ router.get('/resep', async (req, res, next) => {
 
 
 router.get('/cekapikey', async (req, res, next) => {
-	var apikeyInput = req.query.apikey
+    var apikeyInput = req.query.apikey;
+
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	a = await cekApiKey(apikeyInput)
-	if (a) {
-	json = JSON.stringify({
-		status: true,
-		creator: creator,
-		result: {
-            status:a.status,
-			id: a._id,
-			apikey: a.apikey,
-			more_info: {
-				email: a.email,
-				nomor_hp: a.nomor_hp,
-				name: a.name,
-				age: a.age,
-				country: a.country,
-				exp:a.exp,
-			},
-		},
-		message: `Jangan Lupa Follow Ig Gue Yo @hafidzabdillh_`
-	})
-} else {
-	json = JSON.stringify({
-		status: false
-	})
-}
-res.send(JSON.parse(json))
+	if(apikeyInput !== 'freeapi') return res.sendFile(invalidKey)
+	var limit = 'undefined'
+        if (apikeyInput == 'freeapi') { limit = 'Unlimited!' }
+
+try {
+	res.json({
+               status : `active`,
+                apikey : apikeyInput,
+                limit : limit
+            })
+ 
+} catch (e) {
+	res.sendFile(error)
+   }
 })
 
 router.get('/addapikey', (req, res, next) => {
