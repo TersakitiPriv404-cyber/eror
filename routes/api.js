@@ -556,26 +556,32 @@ router.get('/heroml', async (req, res, next) => {
 })
 })
 
-router.get('/ytmp3', async (req, res, next) => {
-        var apikeyInput = req.query.apikey,
-            url = req.query.url
-            
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
-
-       fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/ytmp3?url=${url}&apikey=tvT241pY5rPDYQW`))
-        .then(response => response.json())
+router.get('/ytmp3', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const url = req.query.url;
+  
+  if(!url) return res.json(loghandler.noturl)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)){
+    fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/ytmp3?url=${url}&apikey=tvT241pY5rPDYQW`))
+    .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
+               status: true,
+               code: 200,
+               creator: `${creator}`,
                  result
              })
          })
          .catch(e => {
          	res.json(loghandler.error)
 })
-})
+  } else {
+    res.sendFile(invalidKey)
+  }
+});
 
 router.get('/playmp3', async (req, res, next) => {
         var apikeyInput = req.query.apikey,
