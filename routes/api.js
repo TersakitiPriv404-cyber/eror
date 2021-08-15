@@ -8,6 +8,8 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
+const listkey = ["IntinyaEkaGans", "manogay"];
+
 var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
