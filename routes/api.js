@@ -201,7 +201,7 @@ router.get('/truth', async (req, res, next) => {
 })
 })
 
-router.get('dare', async (req, res, next) => {
+router.get('/dare', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
             
