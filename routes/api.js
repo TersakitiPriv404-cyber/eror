@@ -693,24 +693,6 @@ router.get('/ucapan', async (req, res) => {
 
 })
 
-router.get('/jawa', async (req, res) => {
-        
-
-    var misuhList = ['Jancok', 'Asu'];
-     var misuh = misuhList[Math.floor(Math.random() * misuhList.length)];
-
-    res.json({
-        status: true,
-        creator: `Hafidz Abdillah`,
-        message: `Jangan Lupa Follow Ig @hafidzabdillh_`,
-        result : `${misuh}`
-    })
-    } catch (e) {
-        console.log(e)
-        res.json({ status : false, creator : `Hafidz Abdillah`, message : "Eror, Harap Lapor Ke owner"})
-    }
-
-})
 
 router.get('/hitungmundur', async (req, res) => {
         bulan = req.query.bulan
