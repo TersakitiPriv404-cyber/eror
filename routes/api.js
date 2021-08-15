@@ -649,7 +649,7 @@ router.get('/ucapan', async (req, res) => {
 
 		function tamHari(WaktuJKt){
             var date = new Date(WaktuJKt);
-            var waktoo = date.getHour();
+            var waktoo = date.getHours();
             switch(waktoo){
                 case 0: waktoo = "Tengah Malam🌚"; break;
                 case 1: waktoo = "Tengah Malam🌒"; break;
