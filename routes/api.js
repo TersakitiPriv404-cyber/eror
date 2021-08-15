@@ -763,7 +763,7 @@ router.get('/hitungmundur', async (req, res) => {
 
 })
 
-router.get('/datars', async (req, res, next) => {
+router.get('/rscovid', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
             
