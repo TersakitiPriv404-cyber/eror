@@ -839,7 +839,7 @@ router.get('/ig', async (req, res, next) => {
 	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
 
-       fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/stalk?username=${username}`))
+       fetch(encodeURI(`http://fdz-app.herokuapp.com/api/stalkig?username=${username}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
