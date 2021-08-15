@@ -880,7 +880,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
          })
 })
 
-router.get('/tiktod/stalk', async (req, res, next) => {
+router.get('/stalk/ig', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
         username = req.query.username
 
