@@ -640,6 +640,93 @@ router.get('/ytmp4', async (req, res, next) => {
 })
 })
 
+router.get('/ucapan', async (req, res) => {
+        timeZone = req.query.timeZone
+    if (!timeZone) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter timeZone"})
+
+    try {
+    let WaktuJKt = new Date().toLocaleString("en-US", {timeZone: timeZone});
+
+		function tamHari(WaktuJKt){
+            var date = new Date(WaktuJKt);
+            var waktoo = date.getHours();
+            switch(waktoo){
+                case 0: waktoo = "Tengah Malam🌚"; break;
+                case 1: waktoo = "Tengah Malam🌒"; break;
+                case 2: waktoo = "Dini Hari🌒"; break;
+                case 3: waktoo = "Dini Hari🌓"; break;
+                case 4: waktoo = "Subuh🌔"; break;
+                case 5: waktoo = "Subuh🌔"; break;
+                case 6: waktoo = "Pagi🌝"; break;
+                case 7: waktoo = "Pagi🌝"; break;
+                case 8: waktoo = "Pagi🌝"; break;
+                case 9: waktoo = "Pagi"; break;
+                case 10: waktoo = "Pagi🌞"; break;
+                case 11: waktoo = "Siang🌞"; break;
+                case 12: waktoo = "Siang🌞"; break;
+                case 13: waktoo = "Siang🌞"; break;
+                case 14: waktoo = "Siang🌞"; break;
+                case 15: waktoo = "Sore🌝"; break;
+                case 16: waktoo = "Sore🌝"; break;
+                case 17: waktoo = "Sore🌖"; break;
+                case 18: waktoo = "Magrib🌘"; break;
+                case 19: waktoo = "Magrib🌚"; break;
+                case 20: waktoo = "Malam🌚"; break;
+                case 21: waktoo = "Malam🌚"; break;
+                case 22: waktoo = "Malam🌚"; break;
+                case 23: waktoo = "Tengah Malam🌚"; break;
+            }
+            var tampilHari = "" + waktoo;
+            return `${tampilHari}`
+        }
+
+    res.json({
+        status: true,
+        creator: `Hafidz Abdillah`,
+        message: `Jangan Lupa Follow Ig @hafidzabdillh_`,
+        result : tamHari(WaktuJKt)
+    })
+    } catch (e) {
+        console.log(e)
+        res.json({ status : false, creator : `Hafidz Abdillah`, message : "Eror, Harap Lapor Ke owner"})
+    }
+
+})
+
+router.get('/hitungmundur', async (req, res) => {
+        bulan = req.query.bulan
+        tanggal = req.query.tanggal
+
+    if (!bulan) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter bulan"})
+    if (!tanggal) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter tanggal"})
+
+    try {
+    var countDownDate = new Date(`${bulan} ${tanggal}, 2021 00:00:00`).getTime();
+        var now = new Date().getTime();
+
+		function kurangwaktu(waktunya, waktuskrg){
+			var distance = waktunya - waktuskrg;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			return days + "Hari " + hours + "Jam " + minutes + "Menit " + seconds + "Detik"
+		}
+
+    res.json({
+        status: true,
+        creator: `Hafidz Abdillah`,
+        message: `Jangan Lupa Follow Ig @hafidzabdillh_`,
+        result : kurangwaktu(countDownDate, now)
+    })
+    } catch (e) {
+        console.log(e)
+        res.json({ status : false, creator : `Hafidz Abdillah`, message : "Eror, Harap Report Ke Owner"})
+    }
+
+})
+
 router.get('/ig', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
