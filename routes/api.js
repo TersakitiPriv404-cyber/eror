@@ -882,15 +882,17 @@ router.get('/tiktod/stalk', async (req, res, next) => {
 
 router.get('/stalk/ig', async (req, res, next) => {
     var apikeyInput = req.query.apikey,
-        username = req.query.username
+        judul = req.query.judul
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
-    if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
+    if (!judul) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter judul"})
 
 
-  hx.igstalk(username)
+  hx.lirik(judul)
     .then(result => {
+     console.log(result)
+     });
             res.json({
                 status : true,
                 creator : `${creator}`,
