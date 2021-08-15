@@ -694,15 +694,15 @@ router.get('/ucapan', async (req, res) => {
 })
 
 router.get('/jawa', async (req, res) => {
-        days = req.query.days
-    if (!days) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter Day"})
+        DaysZone = req.query.DaysZone
+    if (!DaysZone) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter Day"})
 
     try {
-    let daysJkt = new Date().toLocaleString("en-US", {days: days});
+    let DaysJkt = new Date().toLocaleString("en-US", {DaysZone: DaysZone});
 
-		function tamDay(daysJKt){
-            var date = new Date(daysJKt);
-            var waktoo = date.getdays();
+		function tamDay(DaysJKt){
+            var date = new Date(DaysJKt);
+            var waktoo = date.getDays();
             switch(waktoo){
                 case Senin: waktoo = "Monday"; break;
                 case Selasa: waktoo = "Tuesday"; break;
@@ -720,7 +720,7 @@ router.get('/jawa', async (req, res) => {
         status: true,
         creator: `Hafidz Abdillah`,
         message: `Jangan Lupa Follow Ig @hafidzabdillh_`,
-        result : tamDay(WaktuJKt)
+        result : tamDay(DaysJKt)
     })
     } catch (e) {
         console.log(e)
