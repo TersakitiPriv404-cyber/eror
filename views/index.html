@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>FaxDill-Api ( Abdillah )</title>
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <audio autoplay="true" src="https://j.top4top.io/m_2049ckfp70.mp3">
+    </audio>
     <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
@@ -16,9 +18,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Wk6KnE7aJHUHjpp_wBoDfkeSIOQfSGMmxg&usqp=CAU"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
     <link rel="shortcut icon" href="https://i.ibb.co/VxyR0TL/0646f374dfba6e4707029289772e6697.jpg"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
    <meta name="description" content="FAXDIL - API">
-   <meta property="og:image" content="https://i.ibb.co/gjbZGxy/IMG-20210521-WA0673.png">
+   <meta property="og:image" content="https://i.ibb.co/VxyR0TL/0646f374dfba6e4707029289772e6697.jpg">
    <meta property="og:site_name" content="FaxxDil~Api's">
    <meta name="keywords" content="Abdillah">
    <meta name="author" content="Hafidz Abdillah">
@@ -69,9 +72,11 @@
           <div class="collapse" id="ui-downloader">
           <ul class="nav flex-column sub-menu">
          <li class="nav-item"> <a class="nav-link"href="api/ytmp3?url=URL&apikey=APIKEY">YouTube [ mp3 ]</a></li>
-         <li class="nav-item"> <a class="nav-link"href="api/ytmp4?url=URL&apikey=APIKEY">YouTube [ mp4 ]</li>
+         <li class="nav-item"> <a class="nav-link"href="api/ytmp4?url=URL&apikey=APIKEY">YouTube [ mp4 ]</a></li>
          <li class="nav-item"> <a class="nav-link"href="api/playmp3?apikey=APIKEY&judul=remukan ati">Play [ mp3 ]</a></li>
          <li class="nav-item"> <a class="nav-link"href="api/playmp4?judul=remukan ati&apikey=APIKEY">Play [ mp4 ]</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/fbdown?url=MASUKAN_URL&apikey=APIKEY">Fb Downloader</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/mediafire?url=Masukan_Url&apikey=APIKEY">Mediafire Downloader</a></li>
           </ul>
           </div>
           </li>
@@ -111,6 +116,7 @@
           <ul class="nav flex-column sub-menu">
           
           <li class="nav-item"> <a class="nav-link"href="api/tiktod/stalk/?username=Sad404-Cyber&apikey=APIKEY">Tiktok Stalk</a></li>
+          <li class="nav-item"> <a class="nav-link"href="api/stalkgh?username=Sad404-Cyber&apikey=APIKEY">Github Stalk</a></li>
           <li class="nav-item"> <a class="nav-link"href="api/ig?username=hafidzabdillh_&apikey=APIKEY">Instagram Stalk</a></li>
           </ul>
           </div>
@@ -154,8 +160,11 @@
           </a>
           <div class="collapse" id="ui-fun">
           <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/api/asahotak?apikey=APIKEY"></a>Asah Otak</li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/jago?kata=mereka&apikey=APIKEY">Jago Kata</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/asah?kata=mereka&apikey=APIKEY">Asah Otak</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/truth?apikey=APIKEY">Truth</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/dare?apikey=APIKEY">Dare</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/api/tebakangka?nomor=10&apikey=APIKEY">Tebak Angka</a></li>
+          	 <li class="nav-item"> <a class="nav-link" href="/api/jago?kata=mereka&apikey=APIKEY">Jago Kata</a></li>
           <li class="nav-item"> <a class="nav-link" href="/api/kuis/caklontong?apikey=APIKEY">Cak Lontong</a></li>
           	        <li class="nav-item"> <a class="nav-link" href="/api/kuis/family100?apikey=APIKEY">Family100</a></li>
           <li class="nav-item"> <a class="nav-link" href="/api/kuis/tebakgambar?apikey=APIKEY">Tebak Gambar</a></li>
@@ -172,10 +181,11 @@
           </a>
           <div class="collapse" id="ui-anime">
           <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/anime/kusonime?apikey=Apikey&search=Search Anime">Kusonime Scraper</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/anime/animeindo?apikey=apikey&search=Search">Anime Indo</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/anime/listnom?apikey=apikey&nomor=nomor">Anime List Nomor</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/anime/nameanime?apikey=apikey&search=search">Anime List Name</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/kusonime?apikey=Apikey&search=Search Anime">Kusonime Scraper</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/animeindo?apikey=apikey&search=Search">Anime Indo</a></li>
+           <li class="nav-item"> <a class="nav-link" href="/api/jurnal?apikey=apikey">Jurnal Otaku</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/listnom?apikey=apikey&nomor=nomor">Anime List Nomor</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/nameanime?apikey=apikey&search=search">Anime List Name</a></li>
           </ul>
           </div>
           </li>
@@ -191,10 +201,15 @@
           <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link" href="api/randomquote?apikey=APIKEY">Random Quotes</a></li>
           <li class="nav-item"> <a class="nav-link" href="api/lucu?apikey=YOUR_APIKEY">Random Quotes Lucu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/sekolah?apikey=YOUR_APIKEY">Data Sekolah</a></li>
+           <li class="nav-item"> <a class="nav-link" href="api/rscovid?apikey=YOUR_APIKEY">Rs Covid-19</a></li>
           <li class="nav-item"> <a class="nav-link" href="api/nama?nama=Hafidz&apikey=YOUR_APIKEY">Arti Nama</a></li>
           <li class="nav-item"> <a class="nav-link" href="api/nomorhoki?nomor=083169814913&apikey=YOUR_APIKEY">Nomor Hoki</a></li>
           <li class="nav-item"> <a class="nav-link" href="api/mimpi?mimpi=digigit Ular&apikey=YOUR_APIKEY">Arti Mimpi</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/ramal?pasangan1=Hafidz&pasangan2=amel&apikey=YOUR_APIKEY">Antara News</a
+          <li class="nav-item"> <a class="nav-link" href="api/heroml?apikey=YOUR_APIKEY">Hero ML List</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/covidindo?apikey=YOUR_APIKEY">Info Covid</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/gempa?apikey=YOUR_APIKEY">Info Gempa</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/store?apikey=Apikey&search=FreeFire">Search PlayStore</a></li>
           <li class="nav-item"> <a class="nav-link" href="api/cerpen?apikey=YOUR_APIKEY">Random Cerpen</a></li>
           </ul>
           </div>
@@ -202,33 +217,52 @@
           <li class="nav-item menu-items">
           <a class="nav-link" data-toggle="collapse" href="#ui-tools" aria-expanded="false" aria-controls="ui-tools">
           <span class="menu-icon">
-          <i class="mdi mdi-apache-kafka"></i>
+          <i class="mdi mdi-wrench"></i>
           </span>
-          <span class="menu-title">Others API</span>
+          <span class="menu-title">Tools API</span>
           <i class="menu-arrow"></i>
           </a>
           <div class="collapse" id="ui-tools">
           <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="api/heroml?apikey=YOUR_APIKEY">Hero ML List</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/covidindo?apikey=YOUR_APIKEY">Info Covid</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/gempa?apikey=YOUR_APIKEY">Info Gempa</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/api/playstore?apikey=Apikey&search=FreeFire">Search PlayStore</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/ucapan?timeZone=Asia/Jakarta">Ucapan</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/hitungmundur?bulan=01&tanggal=02">Hitung Mundur</a></li>
           </ul>
           </div>
+          </li>
+                    <li class="nav-item nav-category">
+          <span class="nav-link">Donasi</span>
+          </li>
+            </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-donasi" aria-expanded="false" aria-controls="ui-donasi">
+          <span class="menu-icon">
+          <i class="mdi mdi-paypal"></i>
+          </span>
+          <span class="menu-title">Donasi Bang:></span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-donasi">
+          <ul class="nav flex-column sub-menu">
+          
+          <li class="nav-item"> <a class="nav-link"href="https://saweria.co/Cidro404">Saweria</a></li>
+          </ul>
+          </div>
+          </li>
+          </li>
           </li>
           <li class="nav-item nav-category">
           <span class="nav-link">Contact Me</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="https://github.com/ekadanuarta">
+            <a class="nav-link" href="https://github.com/Sad404-Cyber">
               <span class="menu-icon">
                 <i class="mdi mdi-github-circle"></i>
               </span>
               <span class="menu-title">Github</span>
             </a>
-          </li>
+            </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="https://wa.me/6288221400832">
+            <a class="nav-link" href="https://wa.me/6283169814913">
               <span class="menu-icon">
                 <i class="mdi mdi-whatsapp"></i>
               </span>
@@ -236,15 +270,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="https://saweria.co/Ekadanuarta">
-              <span class="menu-icon">
-                <i class="mdi mdi-saweria"></i>
-              </span>
-              <span class="menu-title">Donasi</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://instagram.com/ekagans_02">
+            <a class="nav-link" href="https://instagram.com/hafidzabdillh_">
               <span class="menu-icon">
                 <i class="mdi mdi-instagram"></i>
               </span>
@@ -266,7 +292,7 @@
             <ul class="navbar-nav w-100">
               <li class="nav-item w-100">
                 <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex ">
-                  <input type="text" class="form-control" placeholder="Fxc7 APIs">
+                  <input type="text" class="form-control" placeholder="Faxdil~APIs">
                 </form>
               </li>
             </ul>
@@ -292,15 +318,15 @@
                     </div>
                     <div class="preview-item-content">
                       <p class="preview-subject mb-1">Change Template</p>
-                      <p class="text-muted ellipsis mb-0"> Cuman Minta Template doang bang :v </p>
+                      <p class="text-muted ellipsis mb-0">Update Tampilan</p>
                     </div>
                   </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="https://i.ibb.co/YP05qnL/IMG-20210523-WA0099.jpg" alt="">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Ahmad Farhan</p>
+                    <img class="img-xs rounded-circle" src="https://i.ibb.co/VxyR0TL/0646f374dfba6e4707029289772e6697.jpg" alt="">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Hafidz Abdillah</p>
                   </div>
                 </a>
               </li>
@@ -467,33 +493,25 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-12 grid-margin stretch-card">
+                            
+            </div>
+                          <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
               <div class="card-body">
-              <img src="https://i.top4top.io/p_1970vakjn1.jpg" alt="Ojan Ganz" class="logo img-fluid rounded mx-auto d-block mb-4"/>
+              <img src="https://i.ibb.co/VxyR0TL/0646f374dfba6e4707029289772e6697.jpg" alt="Hafidz Abdillah" class="logo img-fluid rounded mx-auto d-block mb-4"/>
               <h6 class="m-0 font-weight-bold text-primary">Information</h6>
               <h6><br>
-              Rest Api Ini Free, Silahakan di pake dengan bijak. <br><br>Apikey Nya? <font color="red">EkaKey</font>
-              <br> Jika menemukan bug / error segera lapor <a href="https://wa.me/6288221400832"> Owner</a></font>
-              </div>
-              <div class="col-md-12 grid-margin stretch-card">
-              <div class="card">
-              <h4 class="card-title">FITUR LAINNYA</h4>
-              <div class="template-demo">
-              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="githubstalk()">GITHUB STALK</button>
-              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="jadwal()">JADWAL SHOLAT</button>
-              <button type="button" id="sbs" class="btn btn-dark btn-lg btn-block" onclick="hilihgen()">HILIH GENERATOR</button>
-              </div>
-              </div>
+              •Rest Api Ini Free Untuk Siapapun Asal Kan Memahami Rules Api. <br><br>
+              •Apikey: <font color="red"> freeapi</font><br><br>
+              •Jika Fitur Bug/Typo/Eror Segera Lapor <a href="https://wa.me/6283169814913">Owner</a>
               </div>
                 </div>
               </div>
             </div>
-          </div>
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <div class="bg-dark btn btn-block btn-outline-danger">
-                <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> Eka</font>
+                <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Developer <span id="Years">00</span> Hafidz Abdillah</font>
               </div>
             </div>
           </footer>
@@ -502,12 +520,12 @@
     </div>
     <script>
       swal({
-        title: 'Welcome To Rest Api eka gans',
-        text: 'Gunakan Dgn Bijak :)',
-        imageUrl: 'https://i.ibb.co/7pmfhHN/IMG-20210526-WA0030.jpg',
+        title: 'Welcome To Website FaxDil~Api',
+        text: 'Gunakan Lah Api Sebaik Mungkin',
+        imageUrl: 'https://i.ibb.co/VxyR0TL/0646f374dfba6e4707029289772e6697.jpg',
         imageWidth: 200,
         imageHeight: 200,
-        imageAlt: 'Danu',
+        imageAlt: 'Hafidz',
         animation: true
       })
     </script>
