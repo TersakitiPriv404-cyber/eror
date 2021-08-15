@@ -694,15 +694,15 @@ router.get('/ucapan', async (req, res) => {
 })
 
 router.get('/jawa', async (req, res) => {
-        DayZone = req.query.Day
-    if (!DayZone) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter Day"})
+        days = req.query.days
+    if (!days) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter Day"})
 
     try {
-    let DayJkt = new Date().toLocaleString("en-US", {DayZone: DayZone});
+    let daysJkt = new Date().toLocaleString("en-US", {days: days});
 
-		function tamDay(DayJKt){
-            var date = new Date(DayJKt);
-            var waktoo = date.getDay();
+		function tamDay(daysJKt){
+            var date = new Date(daysJKt);
+            var waktoo = date.getdays();
             switch(waktoo){
                 case Senin: waktoo = "Monday"; break;
                 case Selasa: waktoo = "Tuesday"; break;
