@@ -5,12 +5,12 @@ var fetch = require('node-fetch');
 var express = require('express');
 var router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
     res.sendFile(__path + '/views/home.html')
 })
 
-router.get('/docs', (req, res) => {
-    res.sendFile(__path + '/public/index.html')
+router.get('/#', (req, res) => {
+    res.sendFile(__path + '/views/index.html')
 })
 
 router.get('/api/game', (req, res) => {
