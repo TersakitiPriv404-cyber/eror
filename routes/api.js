@@ -880,33 +880,6 @@ router.get('/tiktod/stalk', async (req, res, next) => {
          })
 })
 
-router.get('/stalk/ig', async (req, res, next) => {
-    var apikeyInput = req.query.apikey,
-        judul = req.query.judul
-
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
-    if (!judul) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter judul"})
-
-
-  hx.lirik(judul)
-    .then(result => {
-     console.log(result)
-     });
-            res.json({
-                status : true,
-                creator : `${creator}`,
-                result : username
-            })
-        })
-        .catch(e => {
-             res.json({
-                 status : false,
-                 creator : `${creator}`,
-                 message : "error bruh"
-             })
-         })
-})
 
 router.get('/lucu', async (req, res, next) => {
         var apikeyInput = req.query.apikey
