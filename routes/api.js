@@ -7,7 +7,7 @@ var zahirr = db.get("zahirr");
 } catch (e) {
 	console.log('')
 }
-var hx = require('hxz-api');
+
 var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
