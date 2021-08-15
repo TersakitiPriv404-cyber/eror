@@ -5,11 +5,11 @@ var fetch = require('node-fetch');
 var express = require('express');
 var router = express.Router();
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(__path + '/views/home.html')
 })
 
-router.get('/', (req, res) => {
+router.get('/docs', (req, res) => {
     res.sendFile(__path + '/public/index.html')
 })
 
