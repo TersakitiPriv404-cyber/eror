@@ -94,7 +94,7 @@ window.setTimeout("waktu()", 1000);
 	}
 
 // Count Down Idul Adha
-var countDownDate = new Date("Agustus 17, 2021 00:00:00").getTime();
+var countDownDate = new Date("July 19, 2021 00:00:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
@@ -109,8 +109,8 @@ var x = setInterval(function() {
   + minutes + " Min " + seconds + " Sec ";
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("IdulAdha").innerHTML = "Selamat Hari Kemerdekaan ";
-
+    document.getElementById("IdulAdha").innerHTML = "Selamat Hari Raya Idul Adha ";
+  }
 }, 1000);
 
 var batteryLevel = document.getElementById("batteryLevel");
