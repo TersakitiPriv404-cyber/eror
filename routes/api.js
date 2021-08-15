@@ -693,6 +693,58 @@ router.get('/ucapan', async (req, res) => {
 
 })
 
+router.get('/jawa', async (req, res) => {
+        tanggal = req.query.tanggal
+    if (!tanggal) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter tanggal"})
+
+    try {
+    let WaktuJKt = new Date().toLocaleString("en-US", {tanggal: tanggal});
+
+		function tamHari(WaktuJKt){
+            var date = new Date(WaktuJKt);
+            var waktoo = date.getDay();
+            switch(waktoo){
+                case 1: waktoo = "Senin"; break;
+                case 2: waktoo = "Selasa"; break;
+                case 3: waktoo = "Dini Hari🌓"; break;
+                case 4: waktoo = "Rabu"; break;
+                case 5: waktoo = "Kamis"; break;
+                case 6: waktoo = "Jumat"; break;
+                case 7: waktoo = "Sabtu"; break;
+                case 8: waktoo = "Minggu"; break;
+                case 9: waktoo = "Pagi"; break;
+                case 10: waktoo = "Pagi🌞"; break;
+                case 11: waktoo = "Siang🌞"; break;
+                case 12: waktoo = "Siang🌞"; break;
+                case 13: waktoo = "Siang🌞"; break;
+                case 14: waktoo = "Siang🌞"; break;
+                case 15: waktoo = "Sore🌝"; break;
+                case 16: waktoo = "Sore🌝"; break;
+                case 17: waktoo = "Sore🌖"; break;
+                case 18: waktoo = "Magrib🌘"; break;
+                case 19: waktoo = "Magrib🌚"; break;
+                case 20: waktoo = "Malam🌚"; break;
+                case 21: waktoo = "Malam🌚"; break;
+                case 22: waktoo = "Malam🌚"; break;
+                case 23: waktoo = "Tengah Malam🌚"; break;
+            }
+            var tampilHari = "" + waktoo;
+            return `${tampilHari}`
+        }
+
+    res.json({
+        status: true,
+        creator: `Hafidz Abdillah`,
+        message: `Jangan Lupa Follow Ig @hafidzabdillh_`,
+        result : tamHari(WaktuJKt)
+    })
+    } catch (e) {
+        console.log(e)
+        res.json({ status : false, creator : `Hafidz Abdillah`, message : "Eror, Harap Lapor Ke owner"})
+    }
+
+})
+
 router.get('/hitungmundur', async (req, res) => {
         bulan = req.query.bulan
         tanggal = req.query.tanggal
