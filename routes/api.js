@@ -2891,7 +2891,7 @@ router.get('/famely', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput(listkey)) return res.sendFile(invalidKey)
+	if(apikeyInput != 'freeapi') return res.sendFile(invalidKey)
 
        fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/fun/family100?apikey=tvT241pY5rPDYQW`))
         .then(response => response.json())
