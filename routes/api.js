@@ -694,8 +694,7 @@ router.get('/ucapan', async (req, res) => {
 })
 
 router.get('/jawa', async (req, res) => {
-        tanggal = req.query.tanggal
-    if (!tanggal) return res.json({ status : false, creator : `Hafidz Abdillah`, message : "masukan parameter tanggal"})
+        
 
     var misuhList = ['Jancok', 'Asu'];
      var misuh = misuhList[Math.floor(Math.random() * misuhList.length)];
