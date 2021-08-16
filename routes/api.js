@@ -13,6 +13,11 @@ var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 const apikey =  ['freeapi', 'sayahafiz'];
 
+var ffmpeg = require('fluent-ffmpeg');
+var upload = require(__path + '/lib/upload.js');
+var imageToBase64 = require('image-to-base64');
+var axios = require('axios');
+var FormData = require('form-data');
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
@@ -24,8 +29,14 @@ var request = require('request');
 var TikTokScraper = require('tiktok-scraper');
 var router  = express.Router();
 
+var { tts, wait, simih, getBuffer, h2k, banner, getRandom, start, info, success, close, pickRandom } = require(__path + '/lib/functions.js');
+var { RemoveBg } = require('remove.bg');
+var { tahta } = require(__path + '/lib/tahta.js');
+var { createHash } = require('crypto')
+var { spawn, exec } = require('child_process');
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js')
+var { recognize } = require(__path + '/lib/ocr.js')
 var options = require(__path + '/lib/options.js');
 var {
 	Nulis,
