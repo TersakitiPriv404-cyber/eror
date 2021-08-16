@@ -12,6 +12,7 @@ var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 const apikey =  ['freeapi', 'sayahafiz'];
+var key = 'EkakeY' // Apikey Lu Ngab
 
 var ffmpeg = require('fluent-ffmpeg');
 var upload = require(__path + '/lib/upload.js');
@@ -2607,7 +2608,7 @@ router.get('/ssweb', async (req, res, next) => {
 
 try {
   if(!apikeyInput) return res.json(loghandler.notparam)
-  if(apikeyInput !== `${key}`) return res.sendFile(invalidKey)
+  if(apikeyInput !== 'freeapi') return res.sendFile(invalidKey)
   if (!url) return res.json(loghandler.noturl)
   if (!url.startsWith('http')) return res.json(loghandler.invalidLink)
 
