@@ -11,7 +11,7 @@ var zahirr = db.get("zahirr");
 var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
-const apikey =  ['freeapi', 'sayahafiz'];
+const apikey =  ['freeapi', 'sayahafiz', 'Tersakiti404];
 var key = 'EkakeY' // Apikey Lu Ngab
 
 var ffmpeg = require('fluent-ffmpeg');
