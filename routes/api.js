@@ -8,11 +8,11 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['Hafidz Abdillah', 'Hafidz Abdillah.'];
+var creatorList = ['Fajar Alfarizi', 'Fajar Alfarizi.'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
-const apikey =  ['freeapi', 'sayahafiz', 'Tersakiti404];
-var key = 'EkakeY' // Apikey Lu Ngab
+const apikey =  ['freeapi', 'sayahafiz', 'Tersakiti404'];
+var key = 'FajarKey' // Apikey Lu Ngab
 
 var ffmpeg = require('fluent-ffmpeg');
 var upload = require(__path + '/lib/upload.js');
